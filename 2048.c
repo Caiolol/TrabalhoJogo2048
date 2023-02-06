@@ -259,7 +259,7 @@ int main() {
     initBoard(board);
     printf("\e[H\e[2J");
     printBoard(board);
-    printf("Insira a direcao do movimento (1 - cima, 2 - baixo, 3 - esquerda, 4 - direita): \n");
+    printf("Insira a direcao do movimento (1 - cima, 2 - baixo, 3 - esquerda, 4 - direita, 5 - encerrar): \n");
 
     int move;
     int gameOver = 0;
@@ -285,7 +285,10 @@ int main() {
         }
         printf("\e[H\e[2J");
         printBoard(board);
-        printf("Insira a direcao do movimento (1 - cima, 2 - baixo, 3 - esquerda, 4 - direita): \n");
+        printf("Insira a direcao do movimento (1 - cima, 2 - baixo, 3 - direita, 4 - esquerda, 5 - encerrar): \n"); /* nao consegui resolver o problema
+        da esquerda e direita estarem invertidas entao so mudei no printf..... pelomenos funciona
+        */ 
+        
         // verifica se o jogo acabou
         gameOver = checkGameOver(board);
       
